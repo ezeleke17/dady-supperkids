@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Super Kids smiling star</title>
+  <rect width="512" height="512" rx="112" fill="#40745b"/>
+  <path d="M256 88 306 189 418 205 337 284 356 396 256 343 156 396 175 284 94 205 206 189Z" fill="#ffd166" stroke="#fff3ce" stroke-width="12" stroke-linejoin="round"/>
+  <g fill="#25384d"><ellipse cx="222" cy="245" rx="12" ry="17"/><ellipse cx="290" cy="245" rx="12" ry="17"/></g>
+  <path d="M223 285 Q256 320 289 285" fill="none" stroke="#25384d" stroke-width="12" stroke-linecap="round"/>
+</svg>

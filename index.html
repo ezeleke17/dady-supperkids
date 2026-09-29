@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf7ef">
+  <meta name="application-name" content="Daddy's Super Kids">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Super Kids">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" sizes="180x180">
+  <meta name="description" content="Grade 1 and grade 3 math, spelling, reading, writing, and memory adventures. Free, offline-friendly practice for curious minds.">
+  <title>Daddy’s Super Kids game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="recordings.js" defer></script>
+  <script src="coach.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Daddy’s Super Kids game home"><span class="brand-mark" aria-hidden="true">✳</span><span>Daddy’s Super Kids<span class="brand-sub">game</span></span></a>
+    <nav aria-label="Main navigation"><span class="star-bank" aria-label="Total stars"><span aria-hidden="true">★</span> <b id="total-stars">0</b><span class="star-label"> stars earned</span></span><button class="parent-button" id="parent-open"><span aria-hidden="true">⚙</span> Grown-ups</button></nav>
+  </header>
+  <main id="app"></main>
+  <footer><span class="footer-flower" aria-hidden="true">✳</span> Little steps. Big discoveries.<span class="footer-copyright">© Design and Developed by Esayas Zeleke</span><span class="footer-note">Made for curious minds, ages 6–9</span></footer>
+  <dialog id="settings" aria-labelledby="settings-title">
+    <form id="settings-form">
+      <div class="dialog-heading"><span class="eyebrow">THE GROWN-UP CORNER</span><button type="button" class="icon-button" id="parent-close" aria-label="Close settings">×</button></div>
+      <h2 id="settings-title">Room to grow</h2><p>Choose a comfortable challenge for your little explorer. Changes apply to the next game.</p>
+      <label for="difficulty">Adventure difficulty</label><select id="difficulty"><option value="easy">Easy · A gentle start</option><option value="medium">Medium · A little challenge</option><option value="hard">Hard · Ready to stretch</option></select>
+      <p class="settings-detail">Choose 1st or 3rd grade on the home screen. Difficulty adjusts numbers, spelling patterns, and memory pairs within that grade. Reading passages stay at the selected grade level.</p>
+      <details class="coverage"><summary>Learning goals & exam practice</summary><p>Grade 1 builds number sense, phonics, reading, and sentence-writing foundations. Grade 3 adds multiplication, division, fractions, measurement, reading evidence, and written explanations.</p><p>Original practice informed by Massachusetts standards. MCAS starts in grade 3. This is supplemental practice, not an official test, a complete curriculum, or a guarantee of readiness for every exam. Memory is a fun attention break, not an MCAS skill assessment. Writing should be reviewed with a grown-up.</p><a href="https://www.doe.mass.edu/frameworks/current.html" target="_blank" rel="noopener noreferrer">Massachusetts learning standards ↗</a><br><a href="https://www.doe.mass.edu/mcas/testitems.html" target="_blank" rel="noopener noreferrer">Official MCAS questions & practice ↗</a></details>
+      <label class="check-label"><input type="checkbox" id="reduce-motion"> Keep animations quiet</label>
+      <section class="voice-recorder" aria-labelledby="record-title">
+        <h3 id="record-title">🎙 Record Daddy’s voice</h3>
+        <p>Record a little cheer for Sunny to play. Your microphone is used only after you tap Record. Up to 30 seconds, saved only in this browser when you choose Save recording.</p>
+        <label for="record-grade">Who is this cheer for?</label>
+        <select id="record-grade"><option value="1">1st grade · Sarity</option><option value="3">3rd grade · Kiya</option></select>
+        <p>Try: “I believe in you. Take your time. You can do it!”</p>
+        <div class="record-actions"><button type="button" id="record-start">🎙 Record</button><button type="button" id="record-stop" disabled>■ Stop</button><button type="button" id="record-save" disabled>Save recording</button><button type="button" id="record-delete" disabled>Delete recording</button></div>
+        <audio id="record-preview" controls hidden aria-label="Preview your encouragement"></audio>
+        <p id="record-status" role="status" aria-live="polite">Loading saved cheers…</p>
+      </section>
+      <div class="privacy-note">♡ No ads or accounts. Stars, settings, and any voice recordings you choose to save stay in this browser. Recordings are never uploaded.</div>
+      <button class="primary" type="submit">Save settings <span aria-hidden="true">✓</span></button>
+    </form>
+  </dialog>
+</body>
+</html>

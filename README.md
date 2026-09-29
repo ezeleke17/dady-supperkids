@@ -6,11 +6,11 @@ A colorful, touch-friendly HTML, CSS, and JavaScript game for children ages 6–
 
 This is a plain static website. `index.html` must stay at the repository root alongside the CSS, JavaScript, manifest, and `assets` folder. No build command, backend, API key, domain purchase, or localhost server is required on GitHub Pages.
 
-1. Sign in to GitHub and create a **public** repository named `dady-supperkids`. A public repository works with GitHub Free. Do not add credentials or private recordings.
+1. Sign in to GitHub and create a **public** repository named `daddys-super-kids`. A public repository works with GitHub Free. Do not add credentials or private recordings.
 2. Use **Add file → Upload files** (or **uploading an existing file** in a new empty repository). Upload the website files listed below, not the enclosing project folder. Preserve the `assets` folder. Leave out `test-results/`, `node_modules/`, and any local recordings or private files; web uploads do not apply `.gitignore` automatically. Commit to `main`.
 3. Check the repository root contains `index.html`, `styles.css`, `app.js`, `content.js`, `coach.js`, `recordings.js`, `manifest.webmanifest`, `.nojekyll`, and `assets/`. Include this README, `.gitignore`, and `CURRICULUM.md` too. Tests are optional for hosting. If the upload picker skipped hidden files, use **Add file → Create new file** to add `.nojekyll`; it can contain a single comment such as `Static site; no Jekyll build needed.`
 4. Open repository **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**. Select **main** and **/ (root)**, then **Save**.
-5. Wait for the Pages deployment in **Actions** to succeed (it can take up to 10 minutes). Return to **Settings → Pages** and click **Visit site**. The project URL will normally be `https://ezeleke17.github.io/dady-supperkids/`.
+5. Wait for the Pages deployment in **Actions** to succeed (it can take up to 10 minutes). Return to **Settings → Pages** and click **Visit site**. The project URL will normally be `https://ezeleke17.github.io/daddys-super-kids/`.
 6. Ensure **Enforce HTTPS** is enabled when available. Open the HTTPS address on your laptop, iPad, and Android tablet and run the device checks below. Future commits to `main` publish updates automatically.
 
 Source: [GitHub’s publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) and [GitHub Pages quickstart](https://docs.github.com/en/pages/quickstart).

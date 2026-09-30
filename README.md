@@ -96,4 +96,6 @@ Microphone access requires a supported browser and secure context. On your compu
 
 ## Perfect-score prize
 
-A 10/10 math, spelling, or reading round unlocks one optional **Silly Animal Party**. Tap the animals for funny faces and jokes during a two-minute break. No extra stars or penalties are involved. The timer continues while the tab is hidden; closing early uses that round’s prize. Results and any writing stay in place beneath the prize window. A new perfect round earns another break. Memory matching does not unlock this question-round prize.
+A 10/10 math, spelling, or reading round unlocks a choice of one prize: **Silly Animal Party** for two minutes or **Sunny Boat Ride** for three minutes. Tap animals for funny faces and jokes, or steer a sailboat between three river lanes to collect seashell souvenirs. The boat ride is an original game built into this website, with no Roblox connection or account. Use the large lane buttons or left/right arrow keys. Missing shells has no penalty, and souvenirs do not change learning stars.
+
+The timer continues while the tab is hidden; closing early uses that round’s prize. Results and any writing stay in place beneath the prize window. A new perfect round earns another choice of break. Memory matching does not unlock this question-round prize. Run `node tests/prize.cjs` to check both prize timers, unlocks, steering, collection, and return behavior.

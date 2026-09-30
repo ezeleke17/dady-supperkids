@@ -186,14 +186,14 @@ function result() {
   }
   catCoach.feedback('complete', true);
   if (game !== 'memory' && round.score === 10 && !round.prizeUsed) {
-    app.querySelector('.result-actions').insertAdjacentHTML('beforebegin', '<div class="prize-invite"><strong>🎁 10/10! You unlocked a silly animal party!</strong><p>Enjoy a two-minute giggle break whenever you’re ready.</p><button type="button" class="primary" id="open-prize">Play my 2-minute prize 🎉</button></div>');
-    app.querySelector('#open-prize').addEventListener('click', event => {
+    app.querySelector('.result-actions').insertAdjacentHTML('beforebegin', '<div class="prize-invite"><strong>🎁 10/10! Choose your happy break!</strong><p>Pick one prize for this round. Relax, explore, and have fun.</p><div class="reward-choices"><button type="button" class="primary" id="open-prize">Animal party · 2 minutes 🎉</button><button type="button" class="primary" id="open-boat">Boat ride · 3 minutes ⛵</button></div></div>');
+    app.querySelectorAll('#open-prize, #open-boat').forEach(button => button.addEventListener('click', event => {
       if (round.prizeUsed) return;
       round.prizeUsed = true;
-      event.currentTarget.disabled = true;
+      app.querySelectorAll('#open-prize, #open-boat').forEach(choice => { choice.disabled = true; });
       event.currentTarget.textContent = 'Your prize break was opened 💛';
-      prizeGame.open();
-    });
+      prizeGame.open(event.currentTarget.id === 'open-boat' ? 'boat' : 'animals');
+    }));
   }
   app.querySelector('#play-again').addEventListener('click', () => start(game));
   app.querySelector('#result-home').addEventListener('click', () => { home(); focusHeading(); });

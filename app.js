@@ -185,6 +185,16 @@ function result() {
     app.querySelector('.result-actions').insertAdjacentHTML('beforebegin', `<section class="writing-practice"><h2>Now tell it in your own words</h2><p>Choose a writing adventure to do with a grown-up. Writing is not automatically scored or saved.</p>${passages.map((q,i) => `<details><summary>${q.title}</summary><p>${q.passage}</p><label for="writing-${i}">${q.writingPrompt}</label><textarea id="writing-${i}" rows="5" maxlength="3000" placeholder="Write your ideas here…" spellcheck="true"></textarea></details>`).join('')}<strong>Read your work with a grown-up:</strong><ul><li>Did I answer the question?</li><li>Did I use ${round.grade === '1' ? 'a detail' : 'details and explain my thinking'} from the text?</li><li>Did I use complete sentences, capitals, and punctuation?</li></ul><p>You can also write on paper. Leaving this screen clears typed writing.</p></section>`);
   }
   catCoach.feedback('complete', true);
+  if (game !== 'memory' && round.score === 10 && !round.prizeUsed) {
+    app.querySelector('.result-actions').insertAdjacentHTML('beforebegin', '<div class="prize-invite"><strong>🎁 10/10! You unlocked a silly animal party!</strong><p>Enjoy a two-minute giggle break whenever you’re ready.</p><button type="button" class="primary" id="open-prize">Play my 2-minute prize 🎉</button></div>');
+    app.querySelector('#open-prize').addEventListener('click', event => {
+      if (round.prizeUsed) return;
+      round.prizeUsed = true;
+      event.currentTarget.disabled = true;
+      event.currentTarget.textContent = 'Your prize break was opened 💛';
+      prizeGame.open();
+    });
+  }
   app.querySelector('#play-again').addEventListener('click', () => start(game));
   app.querySelector('#result-home').addEventListener('click', () => { home(); focusHeading(); });
   focusHeading();

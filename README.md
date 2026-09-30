@@ -93,3 +93,7 @@ Open **Grown-ups**, choose the recording’s grade, and tap **Record**. Allow mi
 Recordings stay in this browser’s local storage database. You can replace them by recording and saving again, or use **Delete recording** to remove a grade’s cheer. Browser cleanup can erase them. Closing settings or hiding the page cancels an unfinished recording and releases the microphone. Playback stops on navigation or when the page is hidden.
 
 Microphone access requires a supported browser and secure context. On your computer, use localhost if opening the file directly does not allow recording. On a tablet, the ordinary HTTP Wi-Fi address above supports gameplay but generally cannot access the microphone; use an HTTPS-hosted copy for recording. Test recording and playback on your actual device. The game never uploads your audio.
+
+## Perfect-score prize
+
+A 10/10 math, spelling, or reading round unlocks one optional **Silly Animal Party**. Tap the animals for funny faces and jokes during a two-minute break. No extra stars or penalties are involved. The timer continues while the tab is hidden; closing early uses that round’s prize. Results and any writing stay in place beneath the prize window. A new perfect round earns another break. Memory matching does not unlock this question-round prize.
